@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Almah Lunyagi | MBA Candidate · Operations & Customer Experience Professional</title>
+  <meta name="description" content="Almah Lunyagi — MBA candidate at Quinnipiac University, customer experience and operations professional with a social work foundation. Passionate about human-centered leadership and women in entrepreneurship." />
+  <meta name="keywords" content="Almah Lunyagi, MBA, Quinnipiac University, customer experience, operations, social work, women in entrepreneurship, aviation, leadership" />
+  <meta property="og:title" content="Almah Lunyagi | Portfolio" />
+  <meta property="og:description" content="Operations · Customer Experience · Human-Centered Leadership" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Gloock substitute via Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES — blended pink + warm orange palette
+    ============================================================ */
+    :root {
+      --cream:       #FDFAF5;
+      --blush-light: #F9EDE8;
+      --blush-mid:   #F2CCBB;
+      --blush:       #EDADA0;
+      --rose:        #D47A6A;
+
+      --peach-light: #FDECD6;
+      --peach:       #FAC896;
+      --amber:       #F79039;
+      --warm-brown:  #4A2D0F;
+      --dark:        #2A1A09;
+
+      --text-main:   #2A1A09;
+      --text-muted:  #7A5A48;
+      --text-light:  #BFA090;
+
+      --serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+      --sans:  'DM Sans', sans-serif;
+
+      --radius-sm: 6px;
+      --radius-md: 16px;
+      --radius-lg: 32px;
+      --radius-pill: 999px;
+
+      --shadow-soft: 0 4px 32px rgba(74,45,15,0.10);
+      --shadow-card: 0 2px 16px rgba(74,45,15,0.08);
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--text-main);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    h1,h2,h3,h4 { font-family: var(--serif); line-height: 1.15; }
+
+    /* ============================================================
+       SCROLLBAR
+    ============================================================ */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--blush-light); }
+    ::-webkit-scrollbar-thumb { background: var(--blush); border-radius: 99px; }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 2.5rem;
+      background: rgba(253,250,245,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(237,173,160,0.25);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 24px rgba(74,45,15,0.09); }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--warm-brown);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0; right: 0;
+      height: 1.5px;
+      background: var(--amber);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s;
+    }
+    .nav-links a:hover { color: var(--warm-brown); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta {
+      background: var(--amber);
+      color: #fff !important;
+      padding: 0.5rem 1.3rem;
+      border-radius: var(--radius-pill);
+      font-weight: 600 !important;
+      font-size: 0.78rem !important;
+      letter-spacing: 0.08em !important;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .nav-cta:hover { background: var(--rose) !important; transform: translateY(-1px); }
+    .nav-cta::after { display: none !important; }
+
+    /* Mobile nav toggle */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--warm-brown);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #home {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 7rem 5vw 4rem;
+      gap: 3rem;
+      background: linear-gradient(135deg, var(--cream) 0%, var(--blush-light) 60%, var(--peach-light) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #home::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -80px;
+      width: 520px; height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(247,144,57,0.13) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    #home::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -60px;
+      width: 380px; height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,122,106,0.11) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-text { position: relative; z-index: 2; }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1.2rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px; height: 1.5px;
+      background: var(--amber);
+    }
+    .hero-h1 {
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.08;
+      color: var(--warm-brown);
+      margin-bottom: 0.3rem;
+    }
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--rose);
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: var(--text-muted);
+      font-weight: 300;
+      margin: 1.2rem 0 2.2rem;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .tag {
+      font-size: 0.73rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-pill);
+      background: rgba(237,173,160,0.22);
+      color: var(--rose);
+      border: 1px solid rgba(237,173,160,0.45);
+    }
+    .tag.amber {
+      background: rgba(247,144,57,0.12);
+      color: var(--amber);
+      border-color: rgba(247,144,57,0.35);
+    }
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 2rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--amber);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--warm-brown); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(247,144,57,0.35); }
+    .btn-outline {
+      background: transparent;
+      color: var(--warm-brown);
+      border: 1.5px solid var(--blush);
+    }
+    .btn-outline:hover { background: var(--blush-light); border-color: var(--rose); }
+
+    /* Hero photo */
+    .hero-visual {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-photo-wrap {
+      position: relative;
+      width: clamp(260px, 35vw, 420px);
+      aspect-ratio: 3/4;
+    }
+    .hero-photo-frame {
+      width: 100%;
+      height: 100%;
+      border-radius: var(--radius-lg) var(--radius-lg) 40% 40%;
+      background: linear-gradient(160deg, var(--blush-mid), var(--peach));
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(74,45,15,0.18);
+      position: relative;
+    }
+    .hero-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .hero-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      gap: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-align: center;
+      padding: 1rem;
+    }
+    .hero-photo-placeholder svg { opacity: 0.45; }
+    .hero-badge {
+      position: absolute;
+      bottom: -18px;
+      right: -18px;
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 0.9rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+      min-width: 130px;
+    }
+    .hero-badge-num {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--amber);
+      line-height: 1;
+    }
+    .hero-badge-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 0.2rem;
+    }
+    .hero-badge2 {
+      position: absolute;
+      top: 28px;
+      left: -22px;
+      background: var(--amber);
+      border-radius: var(--radius-md);
+      padding: 0.7rem 1rem;
+      box-shadow: 0 8px 24px rgba(247,144,57,0.30);
+      color: #fff;
+      min-width: 110px;
+    }
+    .hero-badge2-label {
+      font-size: 0.63rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+    .hero-badge2-val {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-top: 0.15rem;
+    }
+
+    /* Scroll cue */
+    .scroll-cue {
+      position: absolute;
+      bottom: 2.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      animation: bounceY 2s ease-in-out infinite;
+    }
+    .scroll-cue svg { color: var(--text-light); }
+    @keyframes bounceY {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50%      { transform: translateX(-50%) translateY(7px); }
+    }
+
+    /* ============================================================
+       SECTION WRAPPER
+    ============================================================ */
+    section { padding: 6rem 5vw; }
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.8rem;
+    }
+    .section-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px; height: 1.5px;
+      background: var(--amber);
+    }
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      font-weight: 600;
+      color: var(--warm-brown);
+      line-height: 1.1;
+      margin-bottom: 1.4rem;
+    }
+    .section-title em {
+      font-style: italic;
+      color: var(--rose);
+    }
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    .divider {
+      width: 60px; height: 2px;
+      background: linear-gradient(90deg, var(--amber), var(--rose));
+      border-radius: 2px;
+      margin: 1.4rem 0;
+    }
+
+    /* ============================================================
+       STORY / ABOUT SECTION
+    ============================================================ */
+    #about {
+      background: var(--cream);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 5rem;
+      align-items: start;
+      margin-top: 3.5rem;
+    }
+    .about-photo-col { position: relative; }
+    .about-photo-frame {
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(145deg, var(--blush-mid), var(--peach));
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+    .about-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .about-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      gap: 0.75rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .about-accent-card {
+      position: absolute;
+      bottom: -28px;
+      right: -28px;
+      background: var(--warm-brown);
+      color: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 1.2rem 1.5rem;
+      width: 200px;
+      box-shadow: 0 8px 32px rgba(74,45,15,0.22);
+    }
+    .about-accent-card-title {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.65;
+      margin-bottom: 0.4rem;
+    }
+    .about-accent-card-body {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-style: italic;
+      line-height: 1.45;
+    }
+    .about-content {}
+    .about-bio p {
+      font-size: 1rem;
+      color: var(--text-main);
+      line-height: 1.82;
+      margin-bottom: 1.2rem;
+      font-weight: 300;
+    }
+    .about-bio p strong {
+      font-weight: 600;
+      color: var(--warm-brown);
+    }
+    .about-bio blockquote {
+      border-left: 3px solid var(--amber);
+      padding: 0.8rem 1.4rem;
+      margin: 2rem 0;
+      background: var(--peach-light);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .about-bio blockquote p {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--warm-brown);
+      margin: 0;
+    }
+    .about-bio blockquote cite {
+      display: block;
+      font-size: 0.75rem;
+      font-style: normal;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      margin-top: 0.4rem;
+    }
+    .about-social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      transition: all 0.2s;
+      border: 1.5px solid var(--blush);
+      color: var(--text-muted);
+    }
+    .social-btn:hover { background: var(--blush-light); border-color: var(--rose); color: var(--warm-brown); }
+
+    /* ============================================================
+       SKILLS / COMPETENCIES
+    ============================================================ */
+    #skills {
+      background: linear-gradient(135deg, var(--blush-light), var(--peach-light));
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .skill-card {
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(237,173,160,0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .skill-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-soft); }
+    .skill-icon {
+      width: 44px; height: 44px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--peach), var(--amber));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .skill-card h3 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--warm-brown);
+      margin-bottom: 0.5rem;
+    }
+    .skill-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ============================================================
+       EXPERIENCE TIMELINE
+    ============================================================ */
+    #experience {
+      background: var(--cream);
+    }
+    .timeline {
+      position: relative;
+      margin-top: 3.5rem;
+      padding-left: 2.5rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 12px; left: 9px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--amber), var(--blush));
+    }
+    .tl-item {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+    .tl-dot {
+      position: absolute;
+      left: -2.5rem;
+      top: 6px;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--amber);
+      border: 3px solid var(--cream);
+      box-shadow: 0 0 0 2px var(--amber);
+    }
+    .tl-date {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.3rem;
+    }
+    .tl-role {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--warm-brown);
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+    .tl-org {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+    .tl-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .tl-bullets li {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      line-height: 1.65;
+      display: flex;
+      gap: 0.6rem;
+      font-weight: 300;
+    }
+    .tl-bullets li::before {
+      content: '→';
+      color: var(--rose);
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+    .tl-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--peach-light);
+      border: 1px solid var(--peach);
+      border-radius: var(--radius-pill);
+      padding: 0.25rem 0.75rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--warm-brown);
+      margin: 0.6rem 0;
+    }
+
+    /* ============================================================
+       VISION SECTION
+    ============================================================ */
+    #vision {
+      background: var(--warm-brown);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    #vision::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(247,144,57,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    #vision .section-eyebrow { color: var(--amber); }
+    #vision .section-title { color: var(--cream); }
+    #vision .section-title em { color: var(--peach); }
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      margin-top: 3rem;
+    }
+    .vision-text p {
+      font-size: 1rem;
+      color: rgba(253,250,245,0.82);
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 1.3rem;
+    }
+    .vision-text p strong { color: var(--peach); font-weight: 600; }
+    .vision-pillars {
+      display: grid;
+      gap: 1.2rem;
+    }
+    .vision-pillar {
+      background: rgba(253,250,245,0.06);
+      border: 1px solid rgba(253,250,245,0.12);
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1.6rem;
+      transition: background 0.2s;
+    }
+    .vision-pillar:hover { background: rgba(253,250,245,0.10); }
+    .vp-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .vp-icon {
+      font-size: 1.4rem;
+    }
+    .vp-title {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--peach);
+    }
+    .vp-body {
+      font-size: 0.87rem;
+      color: rgba(253,250,245,0.72);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ============================================================
+       TRAVELS SECTION
+    ============================================================ */
+    #travels {
+      background: linear-gradient(135deg, var(--cream), var(--blush-light));
+    }
+    .travels-intro {
+      max-width: 680px;
+    }
+    .travels-stat-row {
+      display: flex;
+      gap: 3rem;
+      margin: 2rem 0 3.5rem;
+    }
+    .tstat { text-align: left; }
+    .tstat-num {
+      font-family: var(--serif);
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--amber);
+      line-height: 1;
+    }
+    .tstat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+    .travels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+    .travel-card {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      background: var(--cream);
+      border: 1px solid rgba(237,173,160,0.2);
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: default;
+    }
+    .travel-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-soft); }
+    .travel-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+    .travel-img-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, var(--blush-mid), var(--peach));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--cream);
+      font-size: 2rem;
+      gap: 0.5rem;
+    }
+    .travel-img-placeholder span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+    .travel-card-body { padding: 1.3rem; }
+    .travel-country {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.3rem;
+    }
+    .travel-card-body h3 {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      color: var(--warm-brown);
+      margin-bottom: 0.4rem;
+    }
+    .travel-card-body p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* countries chip list */
+    .country-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 2.5rem;
+    }
+    .chip {
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius-pill);
+      background: var(--cream);
+      border: 1px solid var(--blush);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    #testimonials {
+      background: var(--blush-light);
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin-top: 3rem;
+    }
+    .tcard {
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(237,173,160,0.2);
+    }
+    .tcard-quote {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--text-main);
+      line-height: 1.75;
+      margin-bottom: 1.4rem;
+    }
+    .tcard-author {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .tcard-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blush), var(--amber));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .tcard-name {
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--warm-brown);
+    }
+    .tcard-role {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================
+       CONTACT SECTION
+    ============================================================ */
+    #contact {
+      background: var(--cream);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      margin-top: 3.5rem;
+      align-items: start;
+    }
+    .contact-info h3 {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      color: var(--warm-brown);
+      margin-bottom: 1rem;
+    }
+    .contact-info p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .cdetail {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+    .cdetail-icon {
+      width: 36px; height: 36px;
+      border-radius: var(--radius-sm);
+      background: var(--peach-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .contact-form-wrap {
+      background: var(--blush-light);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      border: 1px solid rgba(237,173,160,0.3);
+    }
+    .form-group {
+      margin-bottom: 1.3rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.45rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.85rem 1.1rem;
+      border: 1.5px solid rgba(237,173,160,0.45);
+      border-radius: var(--radius-sm);
+      background: var(--cream);
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      color: var(--text-main);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--amber); }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-success {
+      display: none;
+      background: var(--peach-light);
+      border: 1px solid var(--amber);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--warm-brown);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: var(--dark);
+      color: rgba(253,250,245,0.75);
+      padding: 3rem 5vw 2rem;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(253,250,245,0.1);
+      margin-bottom: 1.2rem;
+    }
+    .footer-logo {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--peach);
+      font-weight: 600;
+    }
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      font-size: 0.8rem;
+    }
+    .footer-links a:hover { color: var(--peach); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.75rem;
+      color: rgba(253,250,245,0.45);
+    }
+
+    /* ============================================================
+       ANIMATIONS
+    ============================================================ */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+       MOBILE RESPONSIVE
+    ============================================================ */
+    @media (max-width: 900px) {
+      #home { grid-template-columns: 1fr; text-align: center; padding-top: 6rem; }
+      .hero-tags, .hero-btns { justify-content: center; }
+      .hero-sub { margin-left: auto; margin-right: auto; }
+      .hero-visual { order: -1; }
+      .hero-photo-wrap { width: clamp(200px, 55vw, 320px); }
+      .about-grid, .vision-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-accent-card { right: -8px; bottom: -16px; }
+      .travels-stat-row { gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      nav { padding: 1rem 1.4rem; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); padding: 1.5rem 2rem; box-shadow: var(--shadow-soft); }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: flex; }
+      section { padding: 4rem 1.4rem; }
+      .timeline { padding-left: 1.8rem; }
+      .travels-stat-row { flex-wrap: wrap; gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">Almah Lunyagi</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#vision">My Vision</a></li>
+      <li><a href="#travels">Travels</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ============================================================
+       HERO / HOME
+  ============================================================ -->
+  <section id="home">
+    <div class="hero-text fade-up">
+      <div class="hero-eyebrow">MBA Candidate · Quinnipiac University</div>
+      <h1 class="hero-h1">
+        Where <em>People</em><br>
+        Meet Purpose &<br>
+        <em>Systems</em>
+      </h1>
+      <p class="hero-sub">
+        Operations &amp; Customer Experience professional. Social work roots. MBA ambitions. 
+        Passionate about building organizations where people and systems work together seamlessly.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Customer Experience</span>
+        <span class="tag amber">Operations Strategy</span>
+        <span class="tag">Social Work</span>
+        <span class="tag amber">Women in Entrepreneurship</span>
+        <span class="tag">Aviation · Qatar Airways</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Contact Me
+        </a>
+        <a href="#about" class="btn btn-outline">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          My Story
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual fade-up" style="transition-delay:0.2s">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-frame">
+          <!-- 
+            TO ADD YOUR PHOTO: Replace the placeholder below with:
+            <img src="https://raw.githubusercontent.com/AlmahLunyagi/[your-repo]/main/profile.jpg" alt="Almah Lunyagi" />
+          -->
+          <div class="hero-photo-placeholder">
+            <svg width="52" height="52" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            <span>Add profile photo<br>via GitHub</span>
+          </div>
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-num">14+</div>
+          <div class="hero-badge-label">Countries Visited</div>
+        </div>
+        <div class="hero-badge2">
+          <div class="hero-badge2-label">Currently</div>
+          <div class="hero-badge2-val">MBA @ Quinnipiac</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT ME
+  ============================================================ -->
+  <section id="about">
+    <div class="section-eyebrow">About Me</div>
+    <h2 class="section-title">A Story of <em>People,</em><br>Systems & Purpose</h2>
+    <div class="divider"></div>
+
+    <div class="about-grid">
+      <div class="about-photo-col fade-up">
+        <div class="about-photo-frame">
+          <!-- 
+            TO ADD YOUR PHOTO: Replace the placeholder below with:
+            <img src="https://raw.githubusercontent.com/AlmahLunyagi/[your-repo]/main/about.jpg" alt="Almah Lunyagi" />
+          -->
+          <div class="about-photo-placeholder">
+            <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            <span style="font-size:0.75rem;letter-spacing:0.08em">Add photo via GitHub</span>
+          </div>
+        </div>
+        <div class="about-accent-card">
+          <div class="about-accent-card-title">Alma mater</div>
+          <div class="about-accent-card-body">Quinnipiac University · Moi University, Kenya</div>
+        </div>
+      </div>
+
+      <div class="about-content fade-up" style="transition-delay:0.15s">
+        <div class="about-bio">
+          <p>
+            I strongly believe the <strong>best organizations succeed when people and systems work together seamlessly.</strong>
+            I'm a customer experience and operations professional with a social work background, currently pursuing my MBA. 
+            My work sits at the intersection of operational strategy, service excellence, and human-centered leadership.
+          </p>
+          <p>
+            My journey began in <strong>Eldoret, Kenya</strong>, where I studied Social Work at Moi University. In community health settings — 
+            walking alongside vulnerable families at Mama Lucy Kibaki Hospital and conducting impact evaluations with the 
+            AMPATH–USAID partnership — I learned something that no business school course could teach me: 
+            <strong>systems only matter when they serve the human being standing in front of you.</strong>
+          </p>
+          <p>
+            That insight became the lens through which I approached everything that followed. 
+            When I joined <strong>Qatar Airways Group's Al Maha Services</strong> in Doha, I brought that same social work ethos to 
+            premium VIP aviation. Working with 50+ high-profile travelers daily in one of the world's busiest international 
+            airports, I discovered that excellent customer experience isn't about luxury — it's about 
+            <strong>dignity, clarity, and solving problems before they escalate.</strong> 
+            My team reduced escalations by 20% not through scripts, but through empathy and foresight.
+          </p>
+          <p>
+            Now, at <strong>Quinnipiac University's School of Business</strong>, I'm channeling those years of frontline people-work 
+            into an MBA focused on operational strategy and — critically — <strong>women in entrepreneurship and leadership.</strong> 
+            Through my role at the Center for Women in Business, I'm committed to building the kind of ecosystems 
+            where marginalized voices aren't just included; they are centered. The same advocacy instincts I used 
+            defending vulnerable clients in Nairobi now drive how I think about boardrooms, supply chains, and economies.
+          </p>
+          <blockquote>
+            <p>"Would I rather be feared or loved? Easy. Both."</p>
+            <cite>— Michael Scott (my spirit guide in leadership philosophy)</cite>
+          </blockquote>
+          <p>
+            I am a <strong>citizen of the world</strong> — having lived and worked across Kenya, Qatar, and the United States, 
+            and traveled to 14+ countries. That breadth of experience informs everything: my adaptability, 
+            my cultural fluency, and my unshakeable belief that the best solutions come from diverse perspectives.
+          </p>
+        </div>
+
+        <div class="about-social">
+          <a href="https://www.linkedin.com/in/almah-lunyagi/" target="_blank" rel="noopener" class="social-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/AlmahLunyagi" target="_blank" rel="noopener" class="social-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:lunyagialmah@gmail.com" class="social-btn">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS
+  ============================================================ -->
+  <section id="skills">
+    <div class="section-eyebrow">Core Competencies</div>
+    <h2 class="section-title">What I <em>Bring</em> to the Table</h2>
+    <div class="divider"></div>
+
+    <div class="skills-grid">
+      <div class="skill-card fade-up">
+        <div class="skill-icon">⚙️</div>
+        <h3>Operations & Strategy</h3>
+        <p>Strategic operations design, service management, process optimization, and performance monitoring in international, high-volume environments.</p>
+      </div>
+      <div class="skill-card fade-up" style="transition-delay:0.08s">
+        <div class="skill-icon">✨</div>
+        <h3>Customer & VIP Experience</h3>
+        <p>Delivering premium service excellence with a 95%+ satisfaction rate. Expert in resolving complex travel disruptions and VIP relations.</p>
+      </div>
+      <div class="skill-card fade-up" style="transition-delay:0.16s">
+        <div class="skill-icon">📊</div>
+        <h3>Data & Reporting</h3>
+        <p>Qualitative and quantitative data collection, M&E frameworks, operational reporting, and impact analysis in nonprofit and corporate contexts.</p>
+      </div>
+      <div class="skill-card fade-up" style="transition-delay:0.24s">
+        <div class="skill-icon">🤝</div>
+        <h3>Stakeholder Engagement</h3>
+        <p>Cross-functional collaboration, community engagement, case management, and building trust across multicultural environments.</p>
+      </div>
+      <div class="skill-card fade-up" style="transition-delay:0.32s">
+        <div class="skill-icon">📋</div>
+        <h3>Project & Event Management</h3>
+        <p>End-to-end event coordination, logistics, vendor management, scheduling, and operational readiness for high-visibility programs.</p>
+      </div>
+      <div class="skill-card fade-up" style="transition-delay:0.40s">
+        <div class="skill-icon">💼</div>
+        <h3>Administrative Leadership</h3>
+        <p>Office management, procurement, documentation, email marketing, and administrative systems that enable team performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE TIMELINE
+  ============================================================ -->
+  <section id="experience">
+    <div class="section-eyebrow">Professional Journey</div>
+    <h2 class="section-title">From <em>Social Work</em><br>to the Skies & Beyond</h2>
+    <div class="divider"></div>
+    <p class="section-lead">A career built on one consistent belief: every interaction is an opportunity to leave things better than you found them.</p>
+
+    <div class="timeline">
+
+      <div class="tl-item fade-up">
+        <div class="tl-dot" style="background:var(--amber)"></div>
+        <div class="tl-date">March 2026 – Present</div>
+        <div class="tl-role">Operations & Event Planning Graduate Assistant</div>
+        <div class="tl-org">M&T Bank Center for Innovation & Entrepreneurship · Center for Women in Business — Quinnipiac University, Hamden, CT</div>
+        <div class="tl-highlight">🎓 Current Role</div>
+        <ul class="tl-bullets">
+          <li>Coordinating planning and execution of Center-hosted events, workshops, and speaker engagements.</li>
+          <li>Collaborating with faculty, directors, student fellows, and cross-functional teams to deliver programs with impact.</li>
+          <li>Supporting email marketing campaigns, promotional materials, and website updates.</li>
+          <li>Representing the Centers at open houses and admissions programs, engaging prospective students.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item fade-up" style="transition-delay:0.1s">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Sept 2021 – Jan 2026</div>
+        <div class="tl-role">Hostess — Al Maha Services</div>
+        <div class="tl-org">Qatar Airways Group · Hamad International Airport, Doha, Qatar</div>
+        <ul class="tl-bullets">
+          <li>Delivered VIP meet-and-assist services to 50+ premium passengers daily, maintaining a 95%+ customer satisfaction rating.</li>
+          <li>Resolved complex travel disruptions — misconnections, baggage irregularities, documentation — reducing escalations by 20%.</li>
+          <li>Coordinated cross-functional teams (F&B, reservations, baggage, special handling) for seamless lounge operations.</li>
+          <li>Monitored real-time flight schedules and strategically allocated service touchpoints, decreasing wait times during peak hours.</li>
+          <li>Prepared detailed operational and handover reports ensuring 100% continuity and service-level compliance.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item fade-up" style="transition-delay:0.15s">
+        <div class="tl-dot"></div>
+        <div class="tl-date">June – Dec 2020</div>
+        <div class="tl-role">Administrative Assistant</div>
+        <div class="tl-org">Maestro Properties Ltd · Eldoret, Kenya</div>
+        <ul class="tl-bullets">
+          <li>Implemented improved property management tracking systems, contributing to measurable revenue growth.</li>
+          <li>Streamlined internal processes, reducing workflow inefficiencies by 20%.</li>
+          <li>Managed procurement, inventory, and documentation with 100% accuracy.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item fade-up" style="transition-delay:0.2s">
+        <div class="tl-dot" style="background:var(--rose)"></div>
+        <div class="tl-date">Feb 2019 – March 2020</div>
+        <div class="tl-role">Volunteer Social Worker</div>
+        <div class="tl-org">Mama Lucy Kibaki Hospital · Nairobi, Kenya</div>
+        <div class="tl-highlight" style="background:rgba(212,122,106,0.12);border-color:rgba(212,122,106,0.35);color:var(--rose)">🌍 Where it All Began</div>
+        <ul class="tl-bullets">
+          <li>Advocated for over 100 vulnerable clients annually, promoting rights awareness and reducing stigma-related escalations.</li>
+          <li>Conducted socio-economic assessments and home visits, improving treatment adherence through tailored interventions.</li>
+          <li>Developed community linkages, increasing successful service referrals by 25%.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item fade-up" style="transition-delay:0.25s">
+        <div class="tl-dot" style="background:var(--rose)"></div>
+        <div class="tl-date">Sept 2018 – Jan 2019</div>
+        <div class="tl-role">Social Worker Intern</div>
+        <div class="tl-org">AMPATH–USAID Partnership · Eldoret, Kenya</div>
+        <ul class="tl-bullets">
+          <li>Conducted socio-economic evaluations to inform targeted intervention strategies.</li>
+          <li>Facilitated gender-based violence awareness and life skills programs, increasing community participation.</li>
+          <li>Collected and analyzed qualitative and quantitative data to support program evaluation and impact reporting.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MY VISION
+  ============================================================ -->
+  <section id="vision">
+    <div class="section-eyebrow">My Vision</div>
+    <h2 class="section-title">Building <em>Futures</em><br>Worth Inhabiting</h2>
+    <div class="divider" style="background:linear-gradient(90deg, var(--amber), var(--peach));"></div>
+
+    <div class="vision-grid">
+      <div class="vision-text fade-up">
+        <p>
+          My vision is a world where <strong>every person — regardless of gender, geography, or background — 
+          has access to the tools, systems, and support they need to build something meaningful.</strong>
+        </p>
+        <p>
+          Growing up in Kenya, working in community health, and then navigating multinational corporate structures 
+          in Qatar's aviation sector, I've seen both the costs of exclusion and the extraordinary potential 
+          that's unlocked when you intentionally design for the margins. 
+          <strong>The systems that work best for the most vulnerable tend to work best for everyone.</strong>
+        </p>
+        <p>
+          Through my MBA and my work at Quinnipiac's Center for Women in Business, I'm building toward 
+          a career at the intersection of <strong>operational excellence and inclusive leadership</strong> — 
+          one where I can help organizations scale without losing sight of the humans at their core.
+        </p>
+        <p>
+          I believe the next generation of leaders won't come from the most privileged rooms — 
+          they'll come from the communities that have been solving impossible problems 
+          <strong>with limited resources for generations.</strong> My job is to open more doors.
+        </p>
+      </div>
+
+      <div class="vision-pillars fade-up" style="transition-delay:0.15s">
+        <div class="vision-pillar">
+          <div class="vp-header">
+            <span class="vp-icon">👩‍💼</span>
+            <div class="vp-title">Women in Entrepreneurship & Leadership</div>
+          </div>
+          <p class="vp-body">Championing platforms, programs, and policies that give women the structural support to lead, not just participate. Through the Center for Women in Business, I'm translating that conviction into action daily.</p>
+        </div>
+        <div class="vision-pillar">
+          <div class="vp-header">
+            <span class="vp-icon">🤲</span>
+            <div class="vp-title">Advocacy for Marginalized Communities</div>
+          </div>
+          <p class="vp-body">My social work roots mean I never forget who gets left out when we build systems for the average user. Real inclusion requires intentional design — in operations, in policy, and in leadership pipelines.</p>
+        </div>
+        <div class="vision-pillar">
+          <div class="vp-header">
+            <span class="vp-icon">🌍</span>
+            <div class="vp-title">Human-Centered Operations at Scale</div>
+          </div>
+          <p class="vp-body">Operational excellence and human dignity are not in tension — they're complementary. I'm building a career proving that the most efficient systems are the ones designed with people at the center.</p>
+        </div>
+        <div class="vision-pillar">
+          <div class="vp-header">
+            <span class="vp-icon">✈️</span>
+            <div class="vp-title">Global Perspective, Local Action</div>
+          </div>
+          <p class="vp-body">Having lived across three continents and navigated multicultural environments professionally, I carry a global lens into every local challenge — bringing nuance, adaptability, and cross-cultural fluency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRAVELS
+  ============================================================ -->
+  <section id="travels">
+    <div class="section-eyebrow">My Travels</div>
+    <h2 class="section-title">A <em>Citizen</em><br>of the World</h2>
+    <div class="divider"></div>
+
+    <div class="travels-intro fade-up">
+      <p class="section-lead">
+        Travel is my most powerful education. Every country I've visited has added a new layer 
+        to how I understand business, culture, empathy, and what it means to be human. 
+        At 14+ countries and counting, the world is my classroom.
+      </p>
+    </div>
+
+    <div class="travels-stat-row fade-up">
+      <div class="tstat">
+        <div class="tstat-num">14+</div>
+        <div class="tstat-label">Countries Visited</div>
+      </div>
+      <div class="tstat">
+        <div class="tstat-num">3</div>
+        <div class="tstat-label">Continents Lived On</div>
+      </div>
+      <div class="tstat">
+        <div class="tstat-num">∞</div>
+        <div class="tstat-label">Perspectives Gained</div>
+      </div>
+    </div>
+
+    <div class="travels-grid">
+      <!-- 
+        TO ADD TRAVEL PHOTOS: Replace each travel-img-placeholder div with:
+        <img class="travel-img" src="https://raw.githubusercontent.com/AlmahLunyagi/[repo]/main/travels/country.jpg" alt="Country name" />
+      -->
+      <div class="travel-card fade-up">
+        <div class="travel-img-placeholder">🇰🇪<span>Kenya</span></div>
+        <div class="travel-card-body">
+          <div class="travel-country">East Africa · Home</div>
+          <h3>Kenya — Where the Story Begins</h3>
+          <p>From the Rift Valley to Nairobi's bustle, Kenya is my foundation — the place that gave me my values, my language, and my unshakeable belief in community.</p>
+        </div>
+      </div>
+      <div class="travel-card fade-up" style="transition-delay:0.08s">
+        <div class="travel-img-placeholder">🇶🇦<span>Qatar</span></div>
+        <div class="travel-card-body">
+          <div class="travel-country">Middle East · 4+ Years</div>
+          <h3>Qatar — Where Excellence Became Standard</h3>
+          <p>Doha's Hamad International Airport is where I learned that world-class service is never accidental. It's built, brick by brick, interaction by interaction.</p>
+        </div>
+      </div>
+      <div class="travel-card fade-up" style="transition-delay:0.16s">
+        <div class="travel-img-placeholder">🇺🇸<span>USA</span></div>
+        <div class="travel-card-body">
+          <div class="travel-country">North America · Current</div>
+          <h3>United States — Where New Chapters Begin</h3>
+          <p>Connecticut has welcomed me with its academic energy and entrepreneurial spirit. Hamden is where I'm sharpening the tools to build what comes next.</p>
+        </div>
+      </div>
+      <div class="travel-card fade-up" style="transition-delay:0.24s">
+        <div class="travel-img-placeholder">🌏<span>Explore</span></div>
+        <div class="travel-card-body">
+          <div class="travel-country">And Many More…</div>
+          <h3>14+ Countries & Counting</h3>
+          <p>Each passport stamp is a reminder that the world is bigger, stranger, and more beautiful than any single perspective can hold. There's always another story to discover.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="country-chips fade-up" style="margin-top:2.5rem">
+      <div class="chip">🇰🇪 Kenya</div>
+      <div class="chip">🇶🇦 Qatar</div>
+      <div class="chip">🇺🇸 United States</div>
+      <div class="chip">🌍 + 11 more countries</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section id="testimonials">
+    <div class="section-eyebrow">Testimonials</div>
+    <h2 class="section-title">What People <em>Say</em></h2>
+    <div class="divider"></div>
+
+    <div class="testimonials-grid">
+      <div class="tcard fade-up">
+        <p class="tcard-quote">"Almah has an extraordinary ability to read a room, solve a problem, and leave everyone feeling heard. Her social work background gives her a depth of empathy that's rare in operations professionals."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">C</div>
+          <div>
+            <div class="tcard-name">Colleague · Qatar Airways</div>
+            <div class="tcard-role">Al Maha Services, Doha</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard fade-up" style="transition-delay:0.1s">
+        <p class="tcard-quote">"What sets Almah apart is her ability to see systems through a human lens. She brings rigor and warmth in equal measure — exactly what the next generation of business leaders need."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar" style="background:linear-gradient(135deg,var(--amber),var(--rose))">F</div>
+          <div>
+            <div class="tcard-name">Faculty Member</div>
+            <div class="tcard-role">Quinnipiac University, School of Business</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard fade-up" style="transition-delay:0.2s">
+        <p class="tcard-quote">"Her cross-cultural fluency and professionalism made every interaction smooth. Almah genuinely cares about the people she works with — and that's immediately felt."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar" style="background:linear-gradient(135deg,var(--warm-brown),var(--amber))">P</div>
+          <div>
+            <div class="tcard-name">Passenger · VIP Client</div>
+            <div class="tcard-role">Hamad International Airport</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center;margin-top:2.5rem;font-size:0.8rem;color:var(--text-light)">
+      ✦ Connect on <a href="https://www.linkedin.com/in/almah-lunyagi/" target="_blank" style="color:var(--amber);font-weight:600">LinkedIn</a> to see more endorsements
+    </p>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact">
+    <div class="section-eyebrow">Contact Me</div>
+    <h2 class="section-title">Let's <em>Connect</em></h2>
+    <div class="divider"></div>
+
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <h3>I'd Love to Hear From You</h3>
+        <p>
+          Whether you're looking to collaborate, have a question about my work, 
+          or simply want to connect — my inbox is always open. 
+          I believe the best opportunities start with a genuine conversation.
+        </p>
+        <div class="contact-details">
+          <div class="cdetail">
+            <div class="cdetail-icon">📧</div>
+            <div>
+              <div style="font-size:0.73rem;color:var(--text-light);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:2px">Email</div>
+              <a href="mailto:lunyagialmah@gmail.com" style="color:var(--warm-brown);font-weight:500">lunyagialmah@gmail.com</a>
+            </div>
+          </div>
+          <div class="cdetail">
+            <div class="cdetail-icon">📍</div>
+            <div>
+              <div style="font-size:0.73rem;color:var(--text-light);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:2px">Location</div>
+              <span style="font-weight:500">Hamden, Connecticut, US</span>
+            </div>
+          </div>
+          <div class="cdetail">
+            <div class="cdetail-icon">🔗</div>
+            <div>
+              <div style="font-size:0.73rem;color:var(--text-light);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:2px">LinkedIn</div>
+              <a href="https://www.linkedin.com/in/almah-lunyagi/" target="_blank" style="color:var(--amber);font-weight:500">almah-lunyagi</a>
+            </div>
+          </div>
+          <div class="cdetail">
+            <div class="cdetail-icon">💻</div>
+            <div>
+              <div style="font-size:0.73rem;color:var(--text-light);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:2px">GitHub</div>
+              <a href="https://github.com/AlmahLunyagi" target="_blank" style="color:var(--amber);font-weight:500">AlmahLunyagi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap fade-up" style="transition-delay:0.15s">
+        <div class="form-success" id="formSuccess">
+          ✓ Thank you! Your message has been sent. I'll be in touch soon.
+        </div>
+        <!-- Web3Forms — replace YOUR_ACCESS_KEY with your key from web3forms.com -->
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+          <input type="hidden" name="subject" value="New message from portfolio — Almah Lunyagi" />
+          <input type="hidden" name="from_name" value="Almah Lunyagi Portfolio" />
+          <input type="checkbox" name="botcheck" style="display:none" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject_line" placeholder="Collaboration, Opportunity, etc." />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your idea, opportunity, or question…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Almah Lunyagi</div>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#travels">Travels</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Almah Lunyagi · All rights reserved</span>
+      <span>MBA Candidate · Quinnipiac University · Hamden, CT</span>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    // Scroll observer for fade-up animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Nav shadow on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Contact form AJAX
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('formSuccess');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type=submit]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        const data = new FormData(form);
+        const res  = await fetch('https://api.web3forms.com/submit', { method:'POST', body: data });
+        const json = await res.json();
+        if (json.success) {
+          successMsg.style.display = 'block';
+          form.reset();
+        } else {
+          alert('Something went wrong. Please email me directly at lunyagialmah@gmail.com');
+        }
+      } catch {
+        alert('Network error. Please email me directly at lunyagialmah@gmail.com');
+      }
+      btn.innerHTML = `<svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message`;
+      btn.disabled = false;
+    });
+  </script>
+</body>
+</html>
